@@ -1,3 +1,10 @@
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:laravel.yukworkshop.website
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} (www\.)?laravel.yukworkshop.website
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:laravel.yukworkshop.website
+
 Options +SymLinksIfOwnerMatch
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^laravel.yukworkshop.website$ [NC,OR]
